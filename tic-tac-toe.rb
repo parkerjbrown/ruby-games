@@ -32,8 +32,15 @@ class TicTacToe
     puts " > Enter 1 for Single-Player"
     puts " > Enter 2 for Double-Player"
     print " Game Mode: "
-    mode = gets.chomp
-    select_game_mode(mode.to_i)
+    loop do
+      mode = gets.chomp.to_i
+      if mode == 1 || mode == 2
+        select_game_mode(mode.to_i)
+        break
+      else
+        print " Invalid game mode. Please try again: "
+      end
+    end
     puts "\n DIRECTIONS: Try to get three in a row by marking spaces on the board!"
     puts " Use board coordinates (A1, B3, C2, etc.) when making moves."
   end
