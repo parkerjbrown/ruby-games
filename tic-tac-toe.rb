@@ -35,7 +35,7 @@ class TicTacToe
     loop do
       mode = gets.chomp.to_i
       if mode == 1 || mode == 2
-        select_game_mode(mode.to_i)
+        select_game_mode(mode)
         break
       else
         print " Invalid game mode. Please try again: "
