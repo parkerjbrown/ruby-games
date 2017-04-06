@@ -1,8 +1,6 @@
 require './support-files/colorize.rb'
 
 class Mastermind
-  attr_accessor #something
-
   def initialize
     $board = {P0: "1", P1: "2", P2: "3", P3: "4"}
     @secret_code = {P0: " ", P1: " ", P2: " ", P3: " "}
